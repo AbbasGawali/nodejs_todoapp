@@ -5,8 +5,8 @@ const mongourl = process.env.MONGOURL;
 
 mongoose.connect(mongourl, {
     dbName: process.env.DBNAME
-}).then(() => {
-    console.log("connection Successfull");
+}).then((c) => {
+    console.log(`connection Successfull with ${c.connection.host}`);
 }).catch(() => {
     console.log("connection failed");
 })
